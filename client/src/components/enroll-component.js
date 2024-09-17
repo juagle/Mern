@@ -69,7 +69,7 @@ const EnrollComponent = ({ currentUser, setCurrentUser }) => {
 
       {currentUser && searchResult && searchResult.length != 0 && (
         <div>
-          <p>這是我們從API返回的數據:</p>
+          <p>以下為查詢到的課程：</p>
           {searchResult.map((course) => {
             return (
               <div key={course._id} className="card" style={{ width: "18rem" }}>

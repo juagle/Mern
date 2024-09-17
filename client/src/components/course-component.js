@@ -1,3 +1,4 @@
+// 課程頁面
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CourseService from "../services/course.service";

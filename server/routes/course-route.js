@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
       .exec();
     return res.send(courseFound);
   } catch (e) {
-    return res.status(5000).send(e);
+    return res.status(500).send(e);
   }
 });
 
@@ -69,7 +69,7 @@ router.post("/", async (req, res) => {
   // 驗證數據符合規範
   let { error } = courseValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
-
+  // 確認user身份
   if (req.user.isStudent()) {
     return res
       .status(400)
